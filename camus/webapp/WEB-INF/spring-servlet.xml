@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns="http://www.springframework.org/schema/beans"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc 	http://www.springframework.org/schema/mvc/spring-mvc-3.1.xsd
+	http://www.springframework.org/schema/aop 	http://www.springframework.org/schema/aop/spring-aop.xsd
+	http://www.springframework.org/schema/beans 	http://www.springframework.org/schema/beans/spring-beans-3.1.xsd
+	http://www.springframework.org/schema/context 	http://www.springframework.org/schema/context/spring-context-3.1.xsd"
+	xmlns:mvc="http://www.springframework.org/schema/mvc">
+
+	<!-- DI @Autowired -->
+	<context:annotation-config />
+	
+	<!-- com.estsoft.myapp.api 아래 @Controller 스캔-->
+	<context:component-scan base-package="com.pikitori.myapp" /> 
+	
+	<!-- 서블릿 컨테이너의 디폴트 서블릿 위임 햔들러 -->
+	<mvc:default-servlet-handler/>
+
+	<!-- 기본 뷰 리졸버  -->
+	<bean
+	  class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	  <property name="prefix" value="/WEB-INF/views/"></property>
+	  <property name="suffix" value=".jsp"></property>
+	</bean>
+	
+	<!-- DefaultAnnotationHandlerMapping 자동 등록 -->
+	<mvc:annotation-driven/>
+	 
+	<!-- 메세지 컨버터 등록 -->
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+   		<property name="messageConverters">
+			<list>
+				<bean class="org.springframework.http.converter.StringHttpMessageConverter"/>
+		        <bean class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter"/>
+		    </list>	
+		</property>
+	</bean>	
+
+
+		 
+</beans>

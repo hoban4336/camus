@@ -26,5 +26,4 @@
 			expression="org.springframework.stereotype.Component" />
 	</context:component-scan>
 
-
 </beans>

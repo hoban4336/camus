@@ -5,15 +5,16 @@ import java.util.List;
 
 import org.springframework.stereotype.Repository;
 
-import com.pikitori.myapp.vo.User;
+import com.pikitori.myapp.vo.UserVo;
+
 
 @Repository
 public class UserService {
 
-	public List<User> getAllUsers() {
-		List<User> list = new ArrayList<User>();
+	public List<UserVo> getAllUsers() {
+		List<UserVo> list = new ArrayList<UserVo>();
 
-		User user = new User();
+		UserVo user = new UserVo();
 		user.setId(1L);
 		user.setName("¾È´ëÇõ");
 		user.setPhone("010-4761-6934");
@@ -23,7 +24,7 @@ public class UserService {
 		user.setStatus(1);
 		list.add(user);
 
-		user = new User();
+		user = new UserVo();
 		user.setId(2L);
 		user.setName("È«¸¶¿À");
 		user.setPhone("010-4761-6934");
@@ -33,7 +34,7 @@ public class UserService {
 		user.setStatus(1);
 		list.add(user);
 
-		user = new User();
+		user = new UserVo();
 		user.setId(3L);
 		user.setName("Å«Çü´Ô");
 		user.setPhone("010-4761-6934");
@@ -43,7 +44,7 @@ public class UserService {
 		user.setStatus(1);
 		list.add(user);
 
-		user = new User();
+		user = new UserVo();
 		user.setId(4L);
 		user.setName("±è½½±â");
 		user.setPhone("010-4761-6934");
@@ -53,7 +54,7 @@ public class UserService {
 		user.setStatus(1);
 		list.add(user);
 
-		user = new User();
+		user = new UserVo();
 		user.setId(5L);
 		user.setName("±èÇæÅ©");
 		user.setPhone("010-4761-6934");
@@ -63,7 +64,7 @@ public class UserService {
 		user.setStatus(1);
 		list.add(user);
 
-		user = new User();
+		user = new UserVo();
 		user.setId(6L);
 		user.setName("ÀÌÀ±ÀÓ");
 		user.setPhone("010-4761-6934");
@@ -73,7 +74,7 @@ public class UserService {
 		user.setStatus(1);
 		list.add(user);
 
-		user = new User();
+		user = new UserVo();
 		user.setId(7L);
 		user.setName("È«³×¸ð");
 		user.setPhone("010-4761-6934");
@@ -83,7 +84,7 @@ public class UserService {
 		user.setStatus(1);
 		list.add(user);
 
-		user = new User();
+		user = new UserVo();
 		user.setId(8L);
 		user.setName("ÀÌ¿ìº¸");
 		user.setPhone("010-4761-6934");
@@ -93,7 +94,7 @@ public class UserService {
 		user.setStatus(1);
 		list.add(user);
 
-		user = new User();
+		user = new UserVo();
 		user.setId(9L);
 		user.setName("¹Ú»§");
 		user.setPhone("010-4761-6934");
@@ -103,7 +104,7 @@ public class UserService {
 		user.setStatus(1);
 		list.add(user);
 
-		user = new User();
+		user = new UserVo();
 		user.setId(10L);
 		user.setName("µå¸²¿÷½º");
 		user.setPhone("010-4761-6934");

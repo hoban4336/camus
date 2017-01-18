@@ -1,7 +1,7 @@
 package com.pikitori.myapp.vo;
 
-public class User {
-
+public class UserVo {
+	
 	private long id;
 	private String email;
 	private String name;
@@ -44,6 +44,6 @@ public class User {
 	public void setProfilePic(String profilePic) {
 		this.profilePic = profilePic;
 	}
-	
-	
+
+
 }
